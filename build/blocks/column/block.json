@@ -1,0 +1,118 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bootstrap-grid/column",
+  "version": "1.0.0",
+  "title": "Column",
+  "category": "bootstrap-grid",
+  "description": "Bootstrap kolom met responsive breakpoints, offsets en bleed opties",
+  "keywords": [
+    "column",
+    "col",
+    "bootstrap",
+    "grid",
+    "kolom"
+  ],
+  "textdomain": "bootstrap-grid-blocks",
+  "attributes": {
+    "colDefault": {
+      "type": "number",
+      "default": 12
+    },
+    "colSm": {
+      "type": "string",
+      "default": ""
+    },
+    "colMd": {
+      "type": "string",
+      "default": ""
+    },
+    "colLg": {
+      "type": "string",
+      "default": ""
+    },
+    "colXl": {
+      "type": "string",
+      "default": ""
+    },
+    "offsetDefault": {
+      "type": "string",
+      "default": ""
+    },
+    "offsetSm": {
+      "type": "string",
+      "default": ""
+    },
+    "offsetMd": {
+      "type": "string",
+      "default": ""
+    },
+    "offsetLg": {
+      "type": "string",
+      "default": ""
+    },
+    "offsetXl": {
+      "type": "string",
+      "default": ""
+    },
+    "bleedLeft": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedRight": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedLeftSm": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedRightSm": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedLeftMd": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedRightMd": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedLeftLg": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedRightLg": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedLeftXl": {
+      "type": "boolean",
+      "default": false
+    },
+    "bleedRightXl": {
+      "type": "boolean",
+      "default": false
+    },
+    "justifyContent": {
+      "type": "string",
+      "default": ""
+    },
+    "alignItems": {
+      "type": "string",
+      "default": ""
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css"
+}

@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "bootstrap-grid/container",
+    "version": "1.0.0",
+    "title": "Container",
+    "category": "bootstrap-grid",
+    "description": "Bootstrap container wrapper",
+    "keywords": ["container", "bootstrap", "grid", "wrapper"],
+    "textdomain": "bootstrap-grid-blocks",
+    "attributes": {
+        "isFluid": {
+            "type": "boolean",
+            "default": false
+        },
+        "className": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "className": true
+    },
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css"
+}

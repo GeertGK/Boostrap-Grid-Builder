@@ -1,0 +1,64 @@
+/**
+ * Editor styles voor Bootstrap Grid Blocks
+ * Alleen visuele hints - layout komt van dynamische grid CSS
+ */
+
+@import './blocks/container/editor.css';
+@import './blocks/row/editor.css';
+@import './blocks/column/editor.css';
+
+/* Box-sizing voor alle grid elements */
+.wp-block-bootstrap-grid-container,
+.wp-block-bootstrap-grid-container *,
+.wp-block-bootstrap-grid-row,
+.wp-block-bootstrap-grid-row *,
+.wp-block-bootstrap-grid-column,
+.wp-block-bootstrap-grid-column * {
+    box-sizing: border-box;
+}
+
+/* Inner blocks wrapper moet flex overnemen van row */
+.wp-block-bootstrap-grid-row > .block-editor-inner-blocks > .block-editor-block-list__layout {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+
+/* Spacing tabs styling */
+.bootstrap-grid-spacing-tabs .components-tab-panel__tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.bootstrap-grid-spacing-tabs .components-tab-panel__tabs button {
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: #757575;
+}
+
+.bootstrap-grid-spacing-tabs .components-tab-panel__tabs button:hover {
+    color: #1e1e1e;
+}
+
+.bootstrap-grid-spacing-tabs .components-tab-panel__tabs button.is-active {
+    color: var(--wp-admin-theme-color, #007cba);
+    border-bottom-color: var(--wp-admin-theme-color, #007cba);
+}
+
+.bootstrap-grid-spacing-tabs .components-select-control {
+    margin-bottom: 0;
+}
+
+.bootstrap-grid-spacing-tabs .components-select-control__input {
+    min-height: 30px;
+    font-size: 12px;
+}

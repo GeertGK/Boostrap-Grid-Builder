@@ -1,0 +1,15 @@
+/* Alleen visuele editor hints - geen layout overschrijving */
+.wp-block-bootstrap-grid-column {
+    border: 1px dashed rgba(214, 54, 56, 0.5);
+    min-height: 40px;
+    background: rgba(214, 54, 56, 0.02);
+}
+
+/* Bleed indicators */
+.wp-block-bootstrap-grid-column[class*="bleed-left"] {
+    border-left: 2px solid #9b59b6;
+}
+
+.wp-block-bootstrap-grid-column[class*="bleed-right"] {
+    border-right: 2px solid #9b59b6;
+}
