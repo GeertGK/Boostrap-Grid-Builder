@@ -1,5 +1,5 @@
 === Bootstrap Grid Blocks ===
-Contributors: geertklaucke, samuelstudios
+Contributors: samuelstudios
 Tags: bootstrap, grid, gutenberg, blocks, columns, margin, padding, spacing
 Requires at least: 6.0
 Tested up to: 6.4
@@ -72,5 +72,5 @@ Via Instellingen > Bootstrap Grid kun je configureren:
 
 == Credits ==
 
-Ontwikkeld door Geert Klaucke / Samuel Studios
+Ontwikkeld door Samuel Studios
 https://samuelstudios.nl

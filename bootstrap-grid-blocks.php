@@ -4,7 +4,7 @@
  * Plugin URI:        https://samuelstudios.nl
  * Description:       Gutenberg blocks voor Bootstrap grid: Container, Row en Column met responsive breakpoints, offsets en bleed opties.
  * Version:           1.0.0
- * Author:            Geert Klaucke / Samuel Studios
+ * Author:            Samuel Studios
  * Author URI:        https://samuelstudios.nl
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
