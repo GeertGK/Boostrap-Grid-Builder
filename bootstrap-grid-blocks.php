@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Bootstrap Grid Blocks
  * Plugin URI:        https://samuelstudios.nl
- * Description:       Gutenberg blocks voor Bootstrap grid: Container, Row en Column met responsive breakpoints, offsets en bleed opties.
- * Version:           1.0.0
+ * Description:       Gutenberg blocks for Bootstrap grid: Container, Row and Column with responsive breakpoints, offsets and bleed options.
+ * Version:           1.0.2
  * Author:            Samuel Studios
  * Author URI:        https://samuelstudios.nl
  * License:           GPL-2.0-or-later
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'BOOTSTRAP_GRID_BLOCKS_VERSION', '1.0.0' );
+define( 'BOOTSTRAP_GRID_BLOCKS_VERSION', '1.0.2' );
 define( 'BOOTSTRAP_GRID_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BOOTSTRAP_GRID_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 

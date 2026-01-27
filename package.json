@@ -1,7 +1,7 @@
 {
     "name": "bootstrap-grid-blocks",
-    "version": "1.0.0",
-    "description": "Gutenberg blocks voor Bootstrap grid systeem",
+    "version": "1.0.2",
+    "description": "Gutenberg blocks for Bootstrap grid system",
     "author": "Samuel Studios <info@samuelstudios.nl> (https://samuelstudios.nl)",
     "license": "GPL-2.0-or-later",
     "homepage": "https://samuelstudios.nl",

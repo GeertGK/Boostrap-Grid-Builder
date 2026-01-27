@@ -3,74 +3,80 @@ Contributors: samuelstudios
 Tags: bootstrap, grid, gutenberg, blocks, columns, margin, padding, spacing
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Gutenberg blocks voor een custom Bootstrap grid systeem met container, row en responsive kolommen. Inclusief margin en padding utilities voor alle blocks.
+Gutenberg blocks for a custom Bootstrap grid system with container, row and responsive columns. Includes margin and padding utilities for all blocks.
 
 == Description ==
 
-Deze plugin voegt drie Gutenberg blocks toe voor het Bootstrap grid systeem:
+This plugin adds three Gutenberg blocks for the Bootstrap grid system:
 
 = Container =
-* Normale container met max-width per breakpoint
-* Fluid optie voor volledige breedte
+* Normal container with max-width per breakpoint
+* Fluid option for full width
 
 = Row =
-* Flex container voor kolommen
-* Horizontale uitlijning (justify-content)
-* Verticale uitlijning (align-items)
+* Flex container for columns
+* Horizontal alignment (justify-content)
+* Vertical alignment (align-items)
 
 = Column =
-* Responsive kolom breedtes (1-12) per breakpoint:
-  * Mobiel (xs)
+* Responsive column widths (1-12) per breakpoint:
+  * Mobile (xs)
   * Small (sm) 576px+
   * Medium (md) 768px+
   * Large (lg) 992px+
   * Extra Large (xl) 1200px+
 * Offset per breakpoint
-* Bleed opties (links/rechts) per breakpoint
+* Bleed options (left/right) per breakpoint
 
 = Spacing Utilities =
-* Margin en padding controls voor ALLE Gutenberg blocks
+* Margin and padding controls for ALL Gutenberg blocks
 * Responsive per breakpoint (xs, sm, md, lg, xl)
-* Configureerbare max waarde en stap in settings
+* Configurable max value and step in settings
 
 = Settings =
-Via Instellingen > Bootstrap Grid kun je configureren:
+Via Settings > Bootstrap Grid you can configure:
 * Breakpoints
 * Container max-widths
-* Aantal kolommen en gutter
-* Spacing utilities (max waarde, stap)
-* CSS output aan/uit
+* Number of columns and gutter
+* Spacing utilities (max value, step)
+* CSS output on/off
 
 == Installation ==
 
-1. Upload de plugin map naar `/wp-content/plugins/`
-2. Activeer de plugin via het 'Plugins' menu in WordPress
-3. De blocks zijn nu beschikbaar onder de categorie "Bootstrap Grid"
-4. Configureer de settings via Instellingen > Bootstrap Grid
+1. Upload the plugin folder to `/wp-content/plugins/`
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. The blocks are now available under the "Bootstrap Grid" category
+4. Configure settings via Settings > Bootstrap Grid
 
 == Development ==
 
-1. `npm install` - Installeer dependencies
+1. `npm install` - Install dependencies
 2. `npm run start` - Start development mode
-3. `npm run build` - Bouw voor productie
+3. `npm run build` - Build for production
 
 == Changelog ==
 
+= 1.0.2 =
+* Updated all documentation to English
+
+= 1.0.1 =
+* Updated author information
+
 = 1.0.0 =
-* Eerste release
-* Container block met fluid optie
-* Row block met flex opties
-* Column block met responsive breedtes, offsets en bleed
-* Margin en padding utilities voor alle blocks
-* Configureerbare settings pagina
-* CSS output toggle voor frontend/editor
+* Initial release
+* Container block with fluid option
+* Row block with flex options
+* Column block with responsive widths, offsets and bleed
+* Margin and padding utilities for all blocks
+* Configurable settings page
+* CSS output toggle for frontend/editor
 
 == Credits ==
 
-Ontwikkeld door Samuel Studios
+Developed by Samuel Studios
 https://samuelstudios.nl
