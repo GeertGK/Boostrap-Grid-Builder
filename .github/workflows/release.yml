@@ -1,0 +1,46 @@
+name: Build and Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Create release zip
+        run: |
+          mkdir -p bootstrap-grid-builder
+          cp -r build/ bootstrap-grid-builder/build/
+          cp -r includes/ bootstrap-grid-builder/includes/
+          cp -r src/ bootstrap-grid-builder/src/
+          cp bootstrap-grid-blocks.php bootstrap-grid-builder/
+          cp readme.txt bootstrap-grid-builder/
+          cp package.json bootstrap-grid-builder/
+          cp package-lock.json bootstrap-grid-builder/
+          cp webpack.config.js bootstrap-grid-builder/
+          [ -f LICENSE ] && cp LICENSE bootstrap-grid-builder/ || true
+          zip -r bootstrap-grid-builder.zip bootstrap-grid-builder/
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: bootstrap-grid-builder.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

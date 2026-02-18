@@ -330,3 +330,45 @@ addFilter(
     'bootstrap-grid-blocks/spacing-classes',
     addSpacingClasses
 );
+
+/**
+ * Filter: Voeg spacing classes toe aan de editor block wrapper
+ */
+const withSpacingEditorClasses = createHigherOrderComponent( ( BlockListBlock ) => {
+    return ( props ) => {
+        if ( ! props || ! props.name ) {
+            return <BlockListBlock { ...props } />;
+        }
+
+        const skipBlocks = [
+            'core/freeform',
+            'core/html',
+            'core/missing',
+            'core/block',
+        ];
+
+        if ( skipBlocks.includes( props.name ) ) {
+            return <BlockListBlock { ...props } />;
+        }
+
+        const { attributes } = props;
+
+        if ( ! attributes ) {
+            return <BlockListBlock { ...props } />;
+        }
+
+        const spacingClasses = buildSpacingClasses( attributes );
+
+        if ( spacingClasses ) {
+            return <BlockListBlock { ...props } className={ spacingClasses } />;
+        }
+
+        return <BlockListBlock { ...props } />;
+    };
+}, 'withSpacingEditorClasses' );
+
+addFilter(
+    'editor.BlockListBlock',
+    'bootstrap-grid-blocks/spacing-editor-classes',
+    withSpacingEditorClasses
+);
