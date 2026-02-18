@@ -3,7 +3,7 @@ Contributors: samuelstudios
 Tags: bootstrap, grid, gutenberg, blocks, columns, margin, padding, spacing
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,7 +61,9 @@ Via Settings > Bootstrap Grid you can configure:
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.0.3 =
+* Added GitHub Actions release workflow for consistent zip packaging
+* Added spacing preview in block editor
 * Updated all documentation to English
 
 = 1.0.1 =
