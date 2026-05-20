@@ -163,3 +163,17 @@ function bootstrap_grid_blocks_grid_styles() {
     wp_add_inline_style( 'bootstrap-grid-blocks-grid', $css );
 }
 add_action( 'enqueue_block_assets', 'bootstrap_grid_blocks_grid_styles' );
+
+/**
+ * Laad row-reverse CSS altijd — onafhankelijk van Bootstrap en plugin-instellingen
+ */
+function bootstrap_grid_row_reverse_styles() {
+    wp_register_style( 'bootstrap-grid-row-reverse', false, array(), BOOTSTRAP_GRID_BLOCKS_VERSION );
+    wp_enqueue_style( 'bootstrap-grid-row-reverse' );
+    wp_add_inline_style( 'bootstrap-grid-row-reverse',
+        '@media (max-width: 767.98px) { .row-reverse-md { flex-direction: column-reverse !important; } .row-reverse-md > * { width: 100%; } }' .
+        '@media (max-width: 991.98px) { .row-reverse-lg { flex-direction: column-reverse !important; } .row-reverse-lg > * { width: 100%; } }'
+    );
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_grid_row_reverse_styles' );
+add_action( 'enqueue_block_assets', 'bootstrap_grid_row_reverse_styles' );
