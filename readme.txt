@@ -3,7 +3,7 @@ Contributors: samuelstudios
 Tags: bootstrap, grid, gutenberg, blocks, columns, margin, padding, spacing
 Requires at least: 6.0
 Tested up to: 6.4
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,9 @@ Via Settings > Bootstrap Grid you can configure:
 3. `npm run build` - Build for production
 
 == Changelog ==
+
+= 1.0.5 =
+* Added responsive column order controls (order-*, order-{breakpoint}-*) per breakpoint
 
 = 1.0.3 =
 * Added GitHub Actions release workflow for consistent zip packaging

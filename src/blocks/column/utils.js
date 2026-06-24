@@ -13,6 +13,11 @@ export function buildColumnClasses( attributes ) {
         offsetMd,
         offsetLg,
         offsetXl,
+        orderDefault,
+        orderSm,
+        orderMd,
+        orderLg,
+        orderXl,
         bleedLeft,
         bleedRight,
         bleedLeftSm,
@@ -62,6 +67,23 @@ export function buildColumnClasses( attributes ) {
     }
     if ( offsetXl ) {
         classes.push( `offset-xl-${ offsetXl }` );
+    }
+
+    // Order (volgorde)
+    if ( orderDefault ) {
+        classes.push( `order-${ orderDefault }` );
+    }
+    if ( orderSm ) {
+        classes.push( `order-sm-${ orderSm }` );
+    }
+    if ( orderMd ) {
+        classes.push( `order-md-${ orderMd }` );
+    }
+    if ( orderLg ) {
+        classes.push( `order-lg-${ orderLg }` );
+    }
+    if ( orderXl ) {
+        classes.push( `order-xl-${ orderXl }` );
     }
 
     // Bleed classes

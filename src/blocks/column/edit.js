@@ -60,6 +60,18 @@ const OFFSET_OPTIONS = [
     { label: '11', value: '11' },
 ];
 
+const ORDER_OPTIONS = [
+    { label: __( 'Geen', 'bootstrap-grid-blocks' ), value: '' },
+    { label: __( 'Eerste', 'bootstrap-grid-blocks' ), value: 'first' },
+    { label: '0', value: '0' },
+    { label: '1', value: '1' },
+    { label: '2', value: '2' },
+    { label: '3', value: '3' },
+    { label: '4', value: '4' },
+    { label: '5', value: '5' },
+    { label: __( 'Laatste', 'bootstrap-grid-blocks' ), value: 'last' },
+];
+
 const JUSTIFY_OPTIONS = [
     { label: __( 'Standaard', 'bootstrap-grid-blocks' ), value: '' },
     { label: __( 'Start', 'bootstrap-grid-blocks' ), value: 'justify-content-start' },
@@ -87,6 +99,11 @@ export default function Edit( { attributes, setAttributes } ) {
         offsetMd,
         offsetLg,
         offsetXl,
+        orderDefault,
+        orderSm,
+        orderMd,
+        orderLg,
+        orderXl,
         bleedLeft,
         bleedRight,
         bleedLeftSm,
@@ -174,6 +191,42 @@ export default function Edit( { attributes, setAttributes } ) {
                         value={ offsetXl }
                         options={ OFFSET_OPTIONS }
                         onChange={ ( value ) => setAttributes( { offsetXl: value } ) }
+                    />
+                </PanelBody>
+
+                <PanelBody title={ __( 'Volgorde (order)', 'bootstrap-grid-blocks' ) } initialOpen={ false }>
+                    <p style={ { fontSize: '12px', color: '#757575', marginBottom: '1rem' } }>
+                        { __( 'Bepaal de visuele volgorde van de kolommen per breakpoint. "Eerste" zet de kolom vooraan, "Laatste" achteraan.', 'bootstrap-grid-blocks' ) }
+                    </p>
+                    <SelectControl
+                        label={ __( 'Mobiel (xs)', 'bootstrap-grid-blocks' ) }
+                        value={ orderDefault }
+                        options={ ORDER_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { orderDefault: value } ) }
+                    />
+                    <SelectControl
+                        label={ __( 'Small (sm) 576px+', 'bootstrap-grid-blocks' ) }
+                        value={ orderSm }
+                        options={ ORDER_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { orderSm: value } ) }
+                    />
+                    <SelectControl
+                        label={ __( 'Medium (md) 768px+', 'bootstrap-grid-blocks' ) }
+                        value={ orderMd }
+                        options={ ORDER_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { orderMd: value } ) }
+                    />
+                    <SelectControl
+                        label={ __( 'Large (lg) 992px+', 'bootstrap-grid-blocks' ) }
+                        value={ orderLg }
+                        options={ ORDER_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { orderLg: value } ) }
+                    />
+                    <SelectControl
+                        label={ __( 'Extra Large (xl) 1200px+', 'bootstrap-grid-blocks' ) }
+                        value={ orderXl }
+                        options={ ORDER_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { orderXl: value } ) }
                     />
                 </PanelBody>
 

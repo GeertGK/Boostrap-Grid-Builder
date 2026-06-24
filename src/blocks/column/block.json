@@ -49,6 +49,26 @@
             "type": "string",
             "default": ""
         },
+        "orderDefault": {
+            "type": "string",
+            "default": ""
+        },
+        "orderSm": {
+            "type": "string",
+            "default": ""
+        },
+        "orderMd": {
+            "type": "string",
+            "default": ""
+        },
+        "orderLg": {
+            "type": "string",
+            "default": ""
+        },
+        "orderXl": {
+            "type": "string",
+            "default": ""
+        },
         "bleedLeft": {
             "type": "boolean",
             "default": false
