@@ -662,6 +662,19 @@ class Bootstrap_Grid_Settings {
             $css .= "}\n";
         }
 
+        // Row reverse utilities (onafhankelijk van Bootstrap)
+        $css .= "\n/* -------------------------------------\n";
+        $css .= "   Row reverse utilities\n";
+        $css .= "   ------------------------------------- */\n";
+        $css .= "@media (max-width: 767.98px) {\n";
+        $css .= "    .row-reverse-md { flex-direction: column-reverse !important; }\n";
+        $css .= "    .row-reverse-md > * { width: 100%; }\n";
+        $css .= "}\n";
+        $css .= "@media (max-width: 991.98px) {\n";
+        $css .= "    .row-reverse-lg { flex-direction: column-reverse !important; }\n";
+        $css .= "    .row-reverse-lg > * { width: 100%; }\n";
+        $css .= "}\n";
+
         // Spacing utilities (margin & padding)
         $css .= $this->generate_spacing_css();
 

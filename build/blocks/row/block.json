@@ -22,6 +22,10 @@
       "type": "string",
       "default": ""
     },
+    "reverseOrder": {
+      "type": "string",
+      "default": ""
+    },
     "className": {
       "type": "string",
       "default": ""

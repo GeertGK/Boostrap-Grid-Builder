@@ -6,6 +6,12 @@ import {
 } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
 
+const REVERSE_OPTIONS = [
+    { label: __( 'Niet omdraaien', 'bootstrap-grid-blocks' ), value: '' },
+    { label: __( 'Omdraaien onder MD (<768px)', 'bootstrap-grid-blocks' ), value: 'row-reverse-md' },
+    { label: __( 'Omdraaien onder LG (<992px)', 'bootstrap-grid-blocks' ), value: 'row-reverse-lg' },
+];
+
 const JUSTIFY_OPTIONS = [
     { label: __( 'Standaard', 'bootstrap-grid-blocks' ), value: '' },
     { label: __( 'Start', 'bootstrap-grid-blocks' ), value: 'justify-content-start' },
@@ -22,9 +28,9 @@ const ALIGN_OPTIONS = [
 ];
 
 export default function Edit( { attributes, setAttributes } ) {
-    const { justifyContent, alignItems } = attributes;
+    const { justifyContent, alignItems, reverseOrder } = attributes;
 
-    const classes = [ 'row', justifyContent, alignItems ].filter( Boolean ).join( ' ' );
+    const classes = [ 'row', justifyContent, alignItems, reverseOrder ].filter( Boolean ).join( ' ' );
 
     const blockProps = useBlockProps( {
         className: classes,
@@ -45,6 +51,12 @@ export default function Edit( { attributes, setAttributes } ) {
                         value={ alignItems }
                         options={ ALIGN_OPTIONS }
                         onChange={ ( value ) => setAttributes( { alignItems: value } ) }
+                    />
+                    <SelectControl
+                        label={ __( 'Volgorde omdraaien', 'bootstrap-grid-blocks' ) }
+                        value={ reverseOrder }
+                        options={ REVERSE_OPTIONS }
+                        onChange={ ( value ) => setAttributes( { reverseOrder: value } ) }
                     />
                 </PanelBody>
             </InspectorControls>
